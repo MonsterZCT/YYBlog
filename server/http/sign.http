@@ -1,0 +1,23 @@
+@url = http://127.0.0.1:9000/
+
+post http://127.0.0.1:9000/sign/register HTTP/1.1
+Content-Type:application/json
+
+{
+   "user" : {
+       "userNickname" : "jack",
+       "userPassword" : "12345678"
+   }
+}
+
+###
+post http://127.0.0.1:9000/sign HTTP/1.1
+Content-Type:application/json
+
+{
+   "user" : {
+       "userID" : 10004,
+       "userPassword" : "12345678"
+   },
+   "keepLogin" : true
+}
